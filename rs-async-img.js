@@ -2,7 +2,7 @@ angular.module('myModuleName').directive('rsAsyncImg', function($q) {
   return {
     restrict: 'E',
     template: function(element, attrs) {
-      return '<em>' + (attrs.alt || 'loading...') + '</em>';
+      return '<em>' + (attrs.rsPlaceholder || 'loading...') + '</em>';
     },
     link: function(scope, element, attrs) {
       var promise = $q(function(resolve, reject) {
