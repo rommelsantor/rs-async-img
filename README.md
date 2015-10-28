@@ -6,6 +6,6 @@ I needed this on a page where I have a parent controller (ContainerController) t
 
 Here's a simple example of its usage:
 
-``<rs-async-img src="/some/image/url.jpg" rs-placeholder="Please wait. Loading..." class="some-image-class"></rs-async-img>``
+``<rs-async-img src="/some/image/url.jpg" rs-placeholder="Please wait. Loading..." class="some-image-class"/>``
 
 The directive will first insert an &lt;em&gt; tag with some placeholder text inside it. Then it will use a promise to load the image asynchronously. Upon successfully loading, the placeholder is replaced with the loaded image.
