@@ -20,7 +20,12 @@ angular.module('myModuleName').directive('rsAsyncImg', function($q) {
       });
 
       promise.then(function(img) {
-        element.relaceWith(img);
+        angular.forEach(attrs.$attr, function(attrName, attrKey) {
+          if (attrKey != 'src')
+            img.setAttribute(attrName, attrs[attrKey]);
+        });
+
+        element.replaceWith(img);
       });
     }
   };
