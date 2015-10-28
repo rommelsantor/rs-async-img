@@ -20,7 +20,7 @@ angular.module('myModuleName').directive('rsAsyncImg', function($q) {
       });
 
       promise.then(function(img) {
-        element.html('').append(img);
+        element.relaceWith(img);
       });
     }
   };
